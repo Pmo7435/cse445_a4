@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- error 1: root element should be NationalParks not NationalPark -->
+<!-- error 1: root element is NationalPark instead of NationalParks -->
 <NationalPark>
 
+  <!-- park 1: grand canyon, valid entry -->
   <NationalPark Rating="4.9">
     <Name>Grand Canyon</Name>
     <Phone>928-638-7496</Phone>
-    <Phone>888-297-2757</Phone>
-    <Phone>866-499-2574</Phone>
     <Address NearestAirport="FlagStaff">
       <Number>8</Number>
       <Street>S Entrance Road</Street>
@@ -16,11 +15,10 @@
     </Address>
   </NationalPark>
 
-  <!-- error 2: missing required NearestAirport attribute on Address -->
+  <!-- error 2: missing required NearestAirport attribute -->
   <NationalPark Rating="4.8">
     <Name>Yellowstone</Name>
     <Phone>307-344-7381</Phone>
-    <Phone>307-344-2107</Phone>
     <Address>
       <Number>1</Number>
       <Street>Grand Loop Road</Street>
@@ -30,7 +28,7 @@
     </Address>
   </NationalPark>
 
-  <!-- error 3: no phone element for yosemite -->
+  <!-- error 3: phone element missing -->
   <NationalPark>
     <Name>Yosemite</Name>
     <Address NearestAirport="Fresno">
@@ -42,19 +40,7 @@
     </Address>
   </NationalPark>
 
-  <!-- error 4: Address tag not closed -->
-  <NationalPark Rating="4.7">
-    <Name>Zion</Name>
-    <Phone>435-772-3256</Phone>
-    <Address NearestAirport="St. George">
-      <Number>1</Number>
-      <Street>Zion Park Blvd</Street>
-      <City>Springdale</City>
-      <State>UT</State>
-      <Zip>84767</Zip>
-  </NationalPark>
-
-  <!-- error 5: two Name elements for rocky mountain -->
+  <!-- error 5: two Name elements -->
   <NationalPark>
     <Name>Rocky Mountain</Name>
     <Name>Rocky Mountain National Park</Name>
@@ -66,6 +52,18 @@
       <State>CO</State>
       <Zip>80517</Zip>
     </Address>
+  </NationalPark>
+
+  <!-- error 4: Address has no closing tag (put last so parser reaches other errors first) -->
+  <NationalPark Rating="4.7">
+    <Name>Zion</Name>
+    <Phone>435-772-3256</Phone>
+    <Address NearestAirport="St. George">
+      <Number>1</Number>
+      <Street>Zion Park Blvd</Street>
+      <City>Springdale</City>
+      <State>UT</State>
+      <Zip>84767</Zip>
   </NationalPark>
 
 </NationalPark>
