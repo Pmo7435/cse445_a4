@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<NationalParks>
+<NationalPark xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://pmo7435.github.io/cse445_a4/NationalParks.xsd">
 
   <!-- removed NearestAirport -->
   <NationalPark Rating="4.8">
@@ -26,19 +26,6 @@
     </Address>
   </NationalPark>
 
-  <!-- number should be int not text -->
-  <NationalPark Rating="4.7">
-    <Name>Zion</Name>
-    <Phone>435-772-3256</Phone>
-    <Address NearestAirport="St. George">
-      <Number>One</Number>
-      <Street>Zion Park Blvd</Street>
-      <City>Springdale</City>
-      <State>UT</State>
-      <Zip>84767</Zip>
-    </Address>
-  </NationalPark>
-
   <!-- added extra name -->
   <NationalPark>
     <Name>Rocky Mountain</Name>
@@ -53,17 +40,16 @@
     </Address>
   </NationalPark>
 
-  <!-- wrong element name -->
-  <NationalParkk>
-    <Name>Grand Canyon</Name>
-    <Phone>928-638-7496</Phone>
-    <Address NearestAirport="FlagStaff">
-      <Number>8</Number>
-      <Street>S Entrance Road</Street>
-      <City>Grand Canyon</City>
-      <State>AZ</State>
-      <Zip>86023</Zip>
-    </Address>
-  </NationalParkk>
+  <!-- forgot to close Address -->
+  <NationalPark Rating="4.7">
+    <Name>Zion</Name>
+    <Phone>435-772-3256</Phone>
+    <Address NearestAirport="St. George">
+      <Number>1</Number>
+      <Street>Zion Park Blvd</Street>
+      <City>Springdale</City>
+      <State>UT</State>
+      <Zip>84767</Zip>
+  </NationalPark>
 
-</NationalParks>
+</NationalPark>
